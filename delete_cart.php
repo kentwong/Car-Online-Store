@@ -11,6 +11,6 @@ if ((isset($_GET['id'])) && ($_GET['id'] != "")) {
     // Update session values to remove deleted product id
     $_SESSION['cart'] = array_values(array_diff($currentProduct, $toBeDeleted));
     
-    header("Location: products_cart.php"));
+    header("Location: products_cart.php");
 }
 ?>

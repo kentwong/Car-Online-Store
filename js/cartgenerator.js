@@ -1,12 +1,9 @@
-console.log(selectedProduct);
 // use AJAX to load XML file and save to array
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function () {
 	if (this.readyState == 4 && this.status == 200) {
 		// Read data from xml and store to array
 		readCarsXML(this);
-
-		console.log(productsArray);
 
 		// Update Cart if product is added
 		if (selectedProduct != '') {
@@ -17,6 +14,7 @@ xhttp.onreadystatechange = function () {
 xhttp.open("GET", "xml/cars.xml", true);
 xhttp.send();
 
+var productDetailsInString = '';
 function updateCart(productsArray, selectedProduct) {
 	// Removing empty cart message
 	document.getElementById('emptyCartMessage').setAttribute('style', 'display: none;');
@@ -28,11 +26,13 @@ function updateCart(productsArray, selectedProduct) {
 	for (var i = 0; i < selectedProduct.length; i++) {
 		for (var j = 0; j < productsArray.length; j++) {
 			if (productsArray[j].productID == selectedProduct[i]) {
-				console.log('printed');
 				document.getElementById('cart').innerHTML += '<tr><td><img src="images/cars/' + productsArray[j].carImage + '"></td><td>' + productsArray[j].modelYear + '-' + productsArray[j].brand + '-' + productsArray[j].model + '</td><td class=price value="' + productsArray[j].pricePerDay + '">' + '$' + productsArray[j].pricePerDay + '</td><td><input type="number" id="daysInput" class="days" name="days" value="1" min="1"></td><td><a href="delete_cart.php?id=' + productsArray[j].productID + '" class="btn">DELETE</a></td></tr>';
+
+				productDetailsInString += 'Model: ' + productsArray[j].modelYear + '-' + productsArray[j].brand + '-' + productsArray[j].model + '<br>' + 'Mileage: ' + productsArray[j].mileage + '<br>' + 'Fuel-Type: ' + productsArray[j].fuelType + '<br>' + 'Seats: ' + productsArray[j].seats + '<br>' + 'Price Per Day: ' + productsArray[j].pricePerDay + '<br>' + 'Description: ' + productsArray[j].description + '<br><br>';
 			}
 		}
 	}
+	document.getElementById('productInCart').setAttribute('value', productDetailsInString);
 }
 
 function calculateTotalCost() {
@@ -46,7 +46,7 @@ function calculateTotalCost() {
 	return total;
 }
 
-function checkout() {
+function checkInput() {
 	if (selectedProduct == '') {
 		alert('No car has been reserved');
 		window.location.href = "products.php";
@@ -66,11 +66,12 @@ function checkout() {
 		}
 
 		if (isInputsValid) {
-			var toCheckOut = "checkout.php?cost=" + calculateTotalCost();
-			window.location.href = toCheckOut;
+			document.getElementById('totalCost').setAttribute('value', calculateTotalCost());
+			return true;
 		}
 		else {
 			alert('Minimum one (1) day of rental is required.');
+			return false;
 		}
 	}
 }

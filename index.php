@@ -6,20 +6,23 @@
 <div class="slideshow-container">
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <img src="images/homepage/sales.jpg" style="width:100%">
+  <!-- Photo by Evgeny Tchebotarev on Unsplash -->
+  <img src="./images/homepage/1.jpg" alt="car photo 1" style="width:100%">
   <div class="text">Major Sales Up to 30% Off</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="images/homepage/summer_sale.jpg" style="width:100%">
-  <div class="text">All New Design for Summer</div>
+  <!-- Photo by Samuele Errico Piccarini on Unsplash -->
+  <img src="./images/homepage/2.jpg" alt="car photo 2" style="width:100%">
+  <div class="text">All New Cars for Summer</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="images/homepage/buy_more.jpg" style="width:100%">
-  <div class="text">Buy More Save More Offer</div>
+  <!-- Photo by Angus Gray on Unsplash -->
+  <img src="./images/homepage/3.jpg" alt="car photo 3" style="width:100%">
+  <div class="text">Rent More Save More Offer</div>
 </div>
 </div>
 
@@ -72,44 +75,38 @@ function showSlides() { //function to change banner every interval automatically
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 5000); // Change image every ? seconds
+    setTimeout(showSlides, 2000); // Change image every ? seconds
 }
 </script>
 			<br><br>
-			<h1>Welcome to our FashionWave online store!</h1>
+			<h1>Welcome to our Hertz-UTS online store!</h1>
 			<p>
-				New arrivals are here. This season, we are bringing you exceptional clothing for men and women.
-				Browse stylish, affordable, high-quality basics that are simple and essential here in our new online
-				store.
-				$20 off for your first purchase. Enter code: <b>20OFFNEW</b> during checkout.
+        Find quality vehicles at affordable rates with Hertz-UTS. We make comparing car hire quick and easy, getting you great rates from Australia’s leading rental suppliers. 20% off for your first car rental. Enter code: <b>20OFFNEW</b> during checkout.
 			</p>
 			<br />
 			<h1>Our Story</h1>
 			<div class="flip-box">
 				  <div class="flip-box-inner">
 				    <div class="flip-box-front">
-				      <img align="left" src="images/homepage/founder.jpg" alt="FashionWave founder" style="width:450px; height:300px">
+              <!-- Photo by Jamie Street on Unsplash -->
+				      <img align="left" src="images/homepage/4.jpg" alt="founder" style="width:450px; height:300px">
 				    </div>
 				    <div class="flip-box-back">
 							<br><br><br><br>
-				      <h2>Katherine Pauline</h2>
-				      <p>The founder of Fashionwave</p>
-							<p>"Fashion is the wave of lifestyle!"</p>
+				      <h2>Runzhe Liao</h2>
+				      <p>The founder of Hertz-UTS</p>
+							<p>"Live your life to the fullest!"</p>
 				    </div>
 				  </div>
 				</div>
 			<p>
-				FashionWave is constructed by 20 middle aged women who design and produce the clothes for both women and
-				men.
-				We are ambitious and innovative in our design, knowing what customers really want.
+      We are proud to be the only true global car rental company, providing quality car rental service for over 90 years.
 			</p>
-			<p>We are Australian brand. All clothes are special and original.
-				Lauching this online store is our first stage of getting exposure online and expanding our business.
-			</p>
-			<h3><b><I>"The secret of great style is to feel good in what you wear."</I></b></h3>
-			<p>This is what FashionWave's founder, Katherine Pauline, says about designs and lifestyle. We are committed
-				to give you the best clothings you will ever need! Fashion is what you buy, style is what you do with
-				it. </p>
+			<p>We sell one-year-old vehicles from our rental fleet to make room for new models. With our low fixed prices, you have the advantage. 
+      </p>
+      <br>
+			<h3><b><I>"We travel not to escape life but for life not to escape us."</I></b></h3>
+			<p>Whether moving across town or travelling, we're here to help. Hertz has set the standard for quality, reliability and service worldwide. We bring you that same dependability for all your moving needs. Rent a car today!</p>
 		</section>
 	</div>
 

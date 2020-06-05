@@ -1,30 +1,38 @@
 <?php
     include ("header.php");
     
-    // Update session variable only if the id parameter is passed thru url
-    if ((isset($_GET['cost'])) && ($_GET['cost'] != '')) {
-        $cost = $_GET['cost'];
+    // Initialise the session if session is yet to initialised
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+
+    // Selected Product Total Cost - Update variable only if the data is POSTed 
+    if ((isset($_POST['totalCost'])) && ($_POST['totalCost'] != '')) {
+        $cost = $_POST['totalCost'];
+
+        // Create total session variable if not yet created
+        if (empty($_SESSION['total'])) {
+            $_SESSION['total'] = '';
+        }
+        $_SESSION['total'] = $cost;
+
     }
     else {
         $cost = '0 (No car selected!)';
     }
-?>
 
-<!-- Javascript for Form Validation-->
-<script>
-
-// https://html.form.guide/best-practices/validate-email-address-using-javascript.html
-function validate() 
-{
-    var email = document.getElementById('email').value;
-    var format = /^(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
-    var result = format.test(email);
-    if(result === false) {
-        alert('Please enter a valid email address.')
+    // Selected Product Details - Update variable only if the data is POSTed 
+    if ((isset($_POST['productInCart'])) && ($_POST['productInCart'] != '')) {
+        $detail = $_POST['productInCart'];
+    
+        // Create details session variable if not yet created
+        if (empty($_SESSION['details'])) {
+            $_SESSION['details'] = '';
+        }
+        $_SESSION['details'] = $detail;
+    
     }
-    return result;
-}
-</script>
+?>
 
 <section id="main">
     <h2>Checkout - Customer Details and Payment</h2>
@@ -34,8 +42,8 @@ function validate()
         <form name="book" method="post" action="booking_form_handler.php" onSubmit="return validate()">
 
             <!-- <label>NAME</label> -->
-            <input class="form-control" name="firstName" type="text" id="fname" placeholder="Your First Name *" required><br>
-            <input class="form-control" name="lastName" type="text" id="lname" placeholder="Your Last Name *" required><br>
+            <input class="form-control" name="fname" type="text" id="fname" placeholder="Your First Name *" required><br>
+            <input class="form-control" name="lname" type="text" id="lname" placeholder="Your Last Name *" required><br>
             <!-- <label>E-MAIL</label> -->
             <input class="form-control" name="email" type="email" id="email" placeholder="Your Email *" required><br>
             <!-- <label>ADDRESS</label> -->
@@ -70,6 +78,7 @@ function validate()
     </div>
 </section>
 </div>
+<script src="./js/emailvalidation.js"></script>
 
 <?php
 	include ("footer.php");

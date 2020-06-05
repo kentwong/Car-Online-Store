@@ -9,8 +9,8 @@ include ("header.php");
 	</div> 
 </section>
 </div>
-<script src="readxml.js"></script>
-<script src="updateproduct.js"></script>
+<script src="./js/readxml.js"></script>
+<script src="./js/updateproduct.js"></script>
 
 <?php
 include ("footer.php");

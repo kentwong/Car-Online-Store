@@ -3,18 +3,17 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>FashionWave - Perfect for You!</title>
-	<link rel="stylesheet" href="reset.local.css">
-	<link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+	<title>Hertz-UTS</title>
+	<link rel="stylesheet" href="./css/reset.local.css">
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
 	<div id="container">
 		<header>
 			<div class="logo">
-				<img src="images/fashionwavelogo.png" alt="Fashionwave logo">
+				<img src="./images/logo.png" alt="Hertz-UTS logo">
 			</div>
 			<nav class="topnav">
 				<a href="index.php">HOME</a>
