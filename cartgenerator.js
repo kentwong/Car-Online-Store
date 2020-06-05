@@ -1,25 +1,4 @@
-// // Array to store selected products and add it to session
-// var selectedProduct = [];
-// var temp = [];
-// var session = window.sessionStorage;
-
-// // Code snippet for $_GET equivalent in javascript: https://gist.github.com/michaelbeltran/669c522d2496fe6810ef (Attribute to michaelbetran)
-// var $_GET = [];
-// function GET() {
-// 	var url = location.search.replace("?", "").split("&");
-// 	for (var index = 0; index < url.length; index++) {
-// 		var value = url[index].split("=");
-//         $_GET = value[1];
-// 	}
-// }
-// GET();
-
-// temp.push($_GET);
-// session.setItem('products', JSON.stringify(selectedProduct));
-
-// var storedArray = JSON.parse(sessionStorage.getItem("products"));
-// console.log('stored Array', storedArray);
-
+console.log(selectedProduct);
 // use AJAX to load XML file and save to array
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function () {
@@ -50,13 +29,48 @@ function updateCart(productsArray, selectedProduct) {
 		for (var j = 0; j < productsArray.length; j++) {
 			if (productsArray[j].productID == selectedProduct[i]) {
 				console.log('printed');
-				document.getElementById('cart').innerHTML += '<tr><td><img src="images/cars/' + productsArray[j].carImage + '"></td><td>' + productsArray[j].modelYear + '-' + productsArray[j].brand + '-' + productsArray[j].model + '</td><td>' + productsArray[j].pricePerDay + '</td><td>TEST</td><td><a href="#" class="deleteBtn" onclick="deleteCart(this)" data-product-id="' + productsArray[j].productID + '">DELETE</a></td></tr>';
+				document.getElementById('cart').innerHTML += '<tr><td><img src="images/cars/' + productsArray[j].carImage + '"></td><td>' + productsArray[j].modelYear + '-' + productsArray[j].brand + '-' + productsArray[j].model + '</td><td class=price value="' + productsArray[j].pricePerDay + '">' + '$' + productsArray[j].pricePerDay + '</td><td><input type="number" id="daysInput" class="days" name="days" value="1" min="1"></td><td><a href="delete_cart.php?id=' + productsArray[j].productID + '" class="btn">DELETE</a></td></tr>';
 			}
 		}
 	}
 }
 
-function deleteCart(id) {
-	var productID = id.getAttribute('data-product-id');
-	console.log('Deleted', productID);
+function calculateTotalCost() {
+	var prices = document.querySelectorAll('.price');
+	var days = document.querySelectorAll('.days');
+	var total = 0;
+
+	for (var i = 0; i < prices.length; i++) {
+		total += (prices[i].getAttribute('value') * days[i].value);
+	}
+	return total;
+}
+
+function checkout() {
+	if (selectedProduct == '') {
+		alert('No car has been reserved');
+		window.location.href = "products.php";
+	}
+	else {
+		// Validate the rental days where min rental days is 1, else user can click delete
+		var isInputsValid = true;
+		var rentalDaysInput = document.querySelectorAll('.days');
+		for (var i = 0; i < rentalDaysInput.length; i++) {
+			if (rentalDaysInput[i].value > 0) {
+				isInputsValid = true;
+			}
+			else {
+				isInputsValid = false;
+				break;
+			}
+		}
+
+		if (isInputsValid) {
+			var toCheckOut = "checkout.php?cost=" + calculateTotalCost();
+			window.location.href = toCheckOut;
+		}
+		else {
+			alert('Minimum one (1) day of rental is required.');
+		}
+	}
 }

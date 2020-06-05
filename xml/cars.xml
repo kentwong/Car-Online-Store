@@ -9,7 +9,7 @@
     <Mileage>85364 kms</Mileage>
     <FuelType>Petrol</FuelType>
     <Seats>5</Seats>
-    <PricePerDay>$240</PricePerDay>
+    <PricePerDay>240</PricePerDay>
     <Availability>True</Availability>
     <CarImage>Camry.jpg</CarImage>
     <Description>Crafted Sporty Seats. Google Assistant. Sculpted Body. LED Parabola Headlamps. USB Video Playback.</Description>
@@ -23,7 +23,7 @@
     <Mileage>36782 kms</Mileage>
     <FuelType>Petrol</FuelType>
     <Seats>7</Seats>
-    <PricePerDay>$360</PricePerDay>
+    <PricePerDay>360</PricePerDay>
     <Availability>True</Availability>
     <CarImage>X-trail.jpg</CarImage>
     <Description>Open up to a bigger, bolder world, and get there in a spacious Nissan SUV.</Description>
@@ -37,7 +37,7 @@
     <Mileage>13586 kms</Mileage>
     <FuelType>CNG</FuelType>
     <Seats>5</Seats>
-    <PricePerDay>$180</PricePerDay>
+    <PricePerDay>180</PricePerDay>
     <Availability>True</Availability>
     <CarImage>Golf.jpg</CarImage>
     <Description>It's Never Been More Fun To Drive A Golf. Equipped With The Latest Technology and Advance Safety Features.</Description>
@@ -51,7 +51,7 @@
     <Mileage>9586 kms</Mileage>
     <FuelType>Petrol</FuelType>
     <Seats>5</Seats>
-    <PricePerDay>$220</PricePerDay>
+    <PricePerDay>220</PricePerDay>
     <Availability>True</Availability>
     <CarImage>Civic.jpg</CarImage>
     <Description>The Honda Civic Sedan takes sports styling, performance, technology and fuel efficiency to a whole new level.</Description>
@@ -65,7 +65,7 @@
     <Mileage>9866 kms</Mileage>
     <FuelType>Petrol</FuelType>
     <Seats>5</Seats>
-    <PricePerDay>$350</PricePerDay>
+    <PricePerDay>350</PricePerDay>
     <Availability>False</Availability>
     <CarImage>Captiva.jpg</CarImage>
     <Description>The petrol Captiva LS is available in front-wheel drive, five-seat form with a six-speed manual gearbox.</Description>
@@ -79,7 +79,7 @@
     <Mileage>15051 kms</Mileage>
     <FuelType>Dissel</FuelType>
     <Seats>5</Seats>
-    <PricePerDay>$335</PricePerDay>
+    <PricePerDay>335</PricePerDay>
     <Availability>False</Availability>
     <CarImage>Jimny.jpg</CarImage>
     <Description>Jimny has always featured a ladder frame that offers a solid foundation for serious off-road performance.</Description>
@@ -93,7 +93,7 @@
     <Mileage>8545 kms</Mileage>
     <FuelType>Petrol</FuelType>
     <Seats>5</Seats>
-    <PricePerDay>$270</PricePerDay>
+    <PricePerDay>270</PricePerDay>
     <Availability>True</Availability>
     <CarImage>320i.jpg</CarImage>
     <Description>Surround View Camera. ConnectedDrive. Satellite Navigation. TwinPower Turbo. Real-Time Traffic Info.</Description>
@@ -107,7 +107,7 @@
     <Mileage>10512 kms</Mileage>
     <FuelType>Petrol</FuelType>
     <Seats>5</Seats>
-    <PricePerDay>$340</PricePerDay>
+    <PricePerDay>340</PricePerDay>
     <Availability>True</Availability>
     <CarImage>GLC.jpg</CarImage>
     <Description>For performance, reliability, features and safety, the GLC class is world class.</Description>
@@ -121,7 +121,7 @@
     <Mileage>8154 kms</Mileage>
     <FuelType>Petrol</FuelType>
     <Seats>5</Seats>
-    <PricePerDay>$270</PricePerDay>
+    <PricePerDay>270</PricePerDay>
     <Availability>True</Availability>
     <CarImage>Sonata.jpg</CarImage>
     <Description>The 2016 Hyundai Sonata comes loaded with plenty of standard features inside and out.</Description>
@@ -135,7 +135,7 @@
     <Mileage>14251 kms</Mileage>
     <FuelType>Dissel</FuelType>
     <Seats>7</Seats>
-    <PricePerDay>$360</PricePerDay>
+    <PricePerDay>360</PricePerDay>
     <Availability>False</Availability>
     <CarImage>Cherokee.jpg</CarImage>
     <Description>The Cherokee SUV Takes The Authenticity And Craftsmanship Of Traditional Jeep Design.</Description>

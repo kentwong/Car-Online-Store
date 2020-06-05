@@ -1,5 +1,6 @@
 /* Header and navigation bar */
-header { /*Just defining the header dimension*/
+header {
+	/*Just defining the header dimension*/
 	max-width: 1200px;
 	margin: auto;
 }
@@ -17,11 +18,11 @@ header { /*Just defining the header dimension*/
 	max-width: 1200px;
 	/*padding: 14px 16px; topnav now is inline-block, don't need to use padding.*/
 	margin: 20px auto;
-	text-align: left;  /*make menu align left*/
-	background: rgba(255,255,255,0.5);
+	text-align: left; /*make menu align left*/
+	background: rgba(255, 255, 255, 0.5);
 }
 
-.topnav a{
+.topnav a {
 	color: black;
 	font-weight: bold;
 	text-align: center;
@@ -42,17 +43,19 @@ header { /*Just defining the header dimension*/
 }
 
 .mySlides {
-	display:none
+	display: none;
 }
 
-.w3-left, .w3-right, .w3-badge {
-	cursor:pointer
+.w3-left,
+.w3-right,
+.w3-badge {
+	cursor: pointer;
 }
 
 .w3-badge {
-	height:13px;
-	width:13px;
-	padding:0
+	height: 13px;
+	width: 13px;
+	padding: 0;
 }
 
 /*-------------------------------------------*/
@@ -60,14 +63,16 @@ html {
 	height: 100%;
 }
 
-body { /*background image*/
-	font-family: 'Century Gothic';
+body {
+	/*background image*/
+	font-family: "Century Gothic";
 	background-image: url(images/wood2.png);
 	background-repeat: repeat;
 	height: 100%;
 }
 
-#container { /*Just defining the section dimension*/
+#container {
+	/*Just defining the section dimension*/
 	max-width: 1200px;
 	margin: auto;
 	min-height: 100%;
@@ -78,14 +83,14 @@ body { /*background image*/
 	overflow: auto;
 	min-height: 80vh; /*semi transparent height stick to footer.*/
 	padding-bottom: 150px;
-	background: rgba(255,255,255,0.5); /*Semitransparent background*/
+	background: rgba(255, 255, 255, 0.5); /*Semitransparent background*/
 }
 
-#main h2{
+#main h2 {
 	padding-top: 10px;
 }
 
-#main p{
+#main p {
 	font-size: 18px;
 	padding: 10px 0;
 }
@@ -110,7 +115,6 @@ h6 {
 	font-weight: 800;
 }
 
-
 /*-----------Product Page----------- */
 .product-card {
 	padding: 25px;
@@ -119,7 +123,7 @@ h6 {
 }
 
 .product-card::after {
-	content: '';
+	content: "";
 	display: block;
 	position: absolute;
 	top: 10px;
@@ -138,7 +142,7 @@ h6 {
 	text-align: center;
 }
 
-.cartBtn{
+.cartBtn {
 	text-decoration: none;
 	background: #e91e63;
 	border-color: transparent;
@@ -148,7 +152,7 @@ h6 {
 	letter-spacing: 1.5px;
 	height: 50px;
 	padding: 10px;
-	
+
 	transition: 0.5s;
 	display: block;
 	border-radius: 5px;
@@ -159,7 +163,7 @@ h6 {
 	bottom: 25px;
 }
 
-.cartBtn:hover{
+.cartBtn:hover {
 	background: #f776a1;
 	cursor: pointer; /*change to hand pointer*/
 }
@@ -180,29 +184,29 @@ h6 {
 
 /*-----------Shopping Cart Page-----------*/
 .cart table {
-  border-collapse: collapse;
+	border-collapse: collapse;
 }
 
-.cart th, td {
-  padding: 5px;
+.cart th,
+td {
+	padding: 5px;
 }
 
 .cart th {
-  background-color: #e91e63;
-  color: white;
+	background-color: #e91e63;
+	color: white;
 }
 
 .cart tr:nth-child(even) {
 	background-color: #f2f2f2;
 }
 
-
 /* Slideshow container */
 .slideshow-container {
 	max-width: 1200px;
 	position: relative;
 	margin: auto;
-  }
+}
 
 /* Caption text */
 .text {
@@ -233,41 +237,41 @@ h6 {
 	transition: background-color 0.6s ease;
 }
 
-
 /* Flip box for founder image  */
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
 	float: left;
-  background-color: transparent;
-  width: 450px;
-  height: 300px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+	background-color: transparent;
+	width: 450px;
+	height: 300px;
+	border: 1px solid #f1f1f1;
+	perspective: 1000px; /* Remove this if you don't want the 3D effect */
 	margin-right: 20px;
 }
 
 /* This container is needed to position the front and back side */
 .flip-box-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
 /* Position the front and back side */
-.flip-box-front, .flip-box-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
+.flip-box-front,
+.flip-box-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -283,7 +287,6 @@ h6 {
 	transform: rotateY(180deg);
 }
 
-
 /* Cart Page */
 #emptyCartMessage {
 	text-align: center;
@@ -298,7 +301,7 @@ h6 {
 	width: 150px;
 }
 
-.deleteBtn{
+.btn {
 	text-decoration: none;
 	background: #e91e63;
 	border-color: transparent;
@@ -306,13 +309,85 @@ h6 {
 	font-size: 16px;
 	font-weight: bold;
 	letter-spacing: 1.5px;
-	height: 50px;
-	padding: 10px;
+	padding: 10px 15px;
 	transition: 0.5s;
 	border-radius: 5px;
 }
 
-.deleteBtn:hover{
+.btn:hover {
 	background: #f776a1;
 	cursor: pointer; /*change to hand pointer*/
+}
+
+.checkout {
+	float: right;
+}
+
+#cart input[type="number"] {
+	font-size: 16px;
+	text-align: center;
+	border: none;
+	border-bottom: 2px solid #e91e63;
+	background-color: transparent;
+	max-width: 80px;
+}
+
+#cart input[type="number"]:focus {
+	outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+/* Checkout Page */
+.contact-form {
+	margin: 20px auto;
+	text-align: center;
+}
+
+.form-control {
+	min-width: 600px;
+	background: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid gray;
+	color: black;
+	font-size: 22px;
+	margin-bottom: 20px;
+	line-height: 30px;
+}
+
+form .submitbutton {
+	min-width: 600px;
+	background: dimgray;
+	border-color: transparent;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	height: 50px;
+	transition: 0.5s;
+	margin-bottom: 5px;
+}
+
+form .submitbutton:hover {
+	background-color: #e91e63;
+	cursor: pointer; /*change to hand pointer*/
+}
+
+select {
+	-webkit-appearance: none;
+} /*Removing Drop down menu border*/
+
+.required {
+	color: #e91e63;
 }
