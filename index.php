@@ -84,14 +84,15 @@ function showSlides() { //function to change banner every interval automatically
         Find quality vehicles at affordable rates with Hertz-UTS. We make comparing car hire quick and easy, getting you great rates from Australia’s leading rental suppliers. 20% off for your first car rental. Enter code: <b>20OFFNEW</b> during checkout.
 			</p>
 			<br />
-			<h1>Our Story</h1>
+      <h1>Our Story of Car Renting</h1>
+      <br>
 			<div class="flip-box">
 				  <div class="flip-box-inner">
 				    <div class="flip-box-front">
               <!-- Photo by Jamie Street on Unsplash -->
-				      <img align="left" src="images/homepage/4.jpg" alt="founder" style="width:450px; height:300px">
+				      <img src="images/homepage/4.jpg" alt="founder" class="founder-img">
 				    </div>
-				    <div class="flip-box-back">
+				    <div class="flip-box-back hide">
 							<br><br><br><br>
 				      <h2>Runzhe Liao</h2>
 				      <p>The founder of Hertz-UTS</p>

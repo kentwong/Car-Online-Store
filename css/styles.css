@@ -58,6 +58,11 @@ header {
 	padding: 0;
 }
 
+.founder-img {
+	width: 450px;
+	height: 300px;
+}
+
 /*-------------------------------------------*/
 html {
 	height: 100%;
@@ -393,4 +398,42 @@ select {
 
 .required {
 	color: #e91e63;
+}
+
+@media only screen and (max-width: 600px) {
+	.founder-img {
+		width: 100%;
+		height: auto;
+	}
+
+	.flip-box {
+		display: block;
+		float: none;
+		width: 100%;
+		height: auto;
+		margin-right: 20px;
+	}
+
+	.flip-box-front,
+	.flip-box-back {
+		position: relative;
+	}
+
+	.flip-box:hover .flip-box-inner {
+		transform: none;
+	}
+
+	.hide {
+		display: none;
+	}
+
+	.form-control {
+		min-width: 300px;
+		width: 100%;
+	}
+
+	form .submitbutton {
+		min-width: 300px;
+		width: 100%;
+	}
 }

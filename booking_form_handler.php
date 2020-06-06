@@ -14,7 +14,7 @@
     $orderDetail = $_SESSION['details'];
 
     // Modify orderDetail string to fit email format
-    $orderDetailsEmail = str_replace('<br>', '\n', $orderDetail);
+    $orderDetailsEmail = str_replace("<br>", "\r\n", $orderDetail);
 
     $email_subject = "Hertz-UTS: Order Confirmation";
     $email_body = "Dear $name, \n\n".

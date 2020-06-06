@@ -37,7 +37,7 @@ if (!empty($_GET['id'])) {
 </section>
 </div>
 
-<script>var selectedProduct = <?php echo json_encode($_SESSION['cart']);?>;</script>
+<script>var selectedProduct = <?php echo '["' . implode('", "', $_SESSION['cart']) . '"]';?>;</script>
 <script src="./js/readxml.js"></script>
 <script src="./js/cartgenerator.js"></script>
 
