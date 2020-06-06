@@ -78,7 +78,8 @@
     </div>
 </section>
 </div>
-<script src="./js/emailvalidation.js"></script>
+<script>var selectedProduct = <?php echo '["' . implode('", "', $_SESSION['cart']) . '"]';?>;</script>
+<script src="./js/validation.js"></script>
 
 <?php
 	include ("footer.php");

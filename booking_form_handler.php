@@ -4,9 +4,6 @@
         session_start();
     }
 
-    // Clear cart once booking form is submitted
-    $_SESSION['cart'] = [];
-
     // Send confirmation mail to cx
     $name = $_POST['fname'];
     $visitor_email = $_POST['email'];
@@ -45,5 +42,8 @@
 </div>
 
 <?php
-	include ("footer.php");
+    include ("footer.php");
+    
+    // Destroy session once it is being checkout, clear all session variables including cart
+    session_destroy();
 ?>

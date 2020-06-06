@@ -50,6 +50,7 @@ function checkInput() {
 	if (selectedProduct == '') {
 		alert('No car has been reserved');
 		window.location.href = "products.php";
+		return false;
 	}
 	else {
 		// Validate the rental days where min rental days is 1, else user can click delete
